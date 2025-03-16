@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WhatsApp Knowledge Hub - Your Ultimate Guide to WhatsApp Features and Tips">
+    <meta name="keywords" content="WhatsApp guide, WhatsApp tips, recover deleted WhatsApp messages, WhatsApp troubleshooting">
+    <meta name="author" content="WhatsApp Knowledge Hub">
+    <title>WhatsApp Knowledge Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>WhatsApp Knowledge Hub</h1>
+        <p>Your Ultimate Guide to WhatsApp Features and Tips</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#" class="tablink active" onclick="openTab(event, 'faq')">FAQ</a></li>
+            <li><a href="#" class="tablink" onclick="openTab(event, 'status-saver')">Status Saver</a></li>
+            <li><a href="#" class="tablink" onclick="openTab(event, 'direct-chat')">Direct Chat</a></li>
+            <li><a href="#" class="tablink" onclick="openTab(event, 'message-recovery')">Message Recovery</a></li>
+            <li><a href="#" class="tablink" onclick="openTab(event, 'troubleshooting')">Troubleshooting</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="faq" class="tab-content active">
+            <h2>WhatsApp FAQ</h2>
+            <p>Get answers to the most commonly asked questions about WhatsApp.</p>
+        </div>
+        <div id="status-saver" class="tab-content">
+            <h2>WhatsApp Status Saver Guide</h2>
+            <p>Learn how to save WhatsApp status photos and videos easily.</p>
+        </div>
+        <div id="direct-chat" class="tab-content">
+            <h2>WhatsApp Direct Chat Guide</h2>
+            <p>Learn how to send WhatsApp messages without saving contacts.</p>
+        </div>
+        <div id="message-recovery" class="tab-content">
+            <h2>Recover Deleted WhatsApp Messages</h2>
+            <p>Find out how to restore deleted WhatsApp messages and media.</p>
+        </div>
+        <div id="troubleshooting" class="tab-content">
+            <h2>WhatsApp Troubleshooting & Fixes</h2>
+            <p>Solutions for common WhatsApp issues and errors.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WhatsApp Knowledge Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openTab(event, tabName) {
+            // Hide all tab contents
+            let tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.style.display = 'none');
+
+            // Remove active class from all tab links
+            let tabLinks = document.querySelectorAll('.tablink');
+            tabLinks.forEach(link => link.classList.remove('active'));
+
+            // Show the selected tab and set active class
+            document.getElementById(tabName).style.display = 'block';
+            event.currentTarget.classList.add('active');
+        }
+
+        // Set default tab on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            openTab(event, 'faq'); // Default to FAQ tab
+        });
+    </script>
+</body>
+</html>
